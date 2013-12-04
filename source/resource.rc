@@ -1,0 +1,98 @@
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+
+#include "afxres.h"
+
+#undef APSTUDIO_READONLY_SYMBOLS
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+ID_MAIN DIALOGEX 0, 0, 245, 43
+STYLE DS_3DLOOK | DS_CENTER | WS_VISIBLE | WS_SYSMENU
+CAPTION "OTBR Multi-IPChanger v5.2 - by Baxnie"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON -1, 0,0,0,0 // Fake button.
+    CONTROL ID_BITMAP, ID_STATIC, "Static", 0x5000080E, 0, 0, 70, 70 
+    LTEXT "IP:",ID_STATIC, 50, 7, 20, 9 
+    LTEXT "Port:",ID_STATIC, 50, 27, 20, 9  
+    COMBOBOX ID_IPTEXT,67, 6, 123, 43,CBS_AUTOHSCROLL | CBS_DROPDOWN | WS_VSCROLL | CBS_OWNERDRAWFIXED
+    EDITTEXT ID_PORTTEXT,67, 26, 123, 13,ES_AUTOHSCROLL
+    PUSHBUTTON "Change IP",ID_CHANGE,195, 6, 45, 13
+    PUSHBUTTON "Hide",ID_HIDE,195, 26, 45, 13
+    
+END
+
+ID_ICON16               ICON                    "IPChanger16.ico"
+ID_ICON32               ICON                    "IPChanger.ico"
+
+#endif 
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_PTB)
+#ifdef _WIN32
+LANGUAGE LANG_PORTUGUESE, SUBLANG_PORTUGUESE_BRAZILIAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 5,1,0,0
+ PRODUCTVERSION 5,1,0,0
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Made by Baxnie (C) 2009"
+            VALUE "FileDescription", "Ipchanger Application"
+            VALUE "FileVersion", "5, 2, 0, 0"
+            VALUE "InternalName", "Ipchanger Application"
+            VALUE "LegalCopyright", "Copyright (C) 2009"
+            VALUE "OriginalFilename", "IPChanger.exe"
+            VALUE "ProductName", "Ipchanger Application"
+            VALUE "ProductVersion", "5, 2, 0, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+ID_BITMAP             BITMAP                  "logo.bmp"
+#endif
+
